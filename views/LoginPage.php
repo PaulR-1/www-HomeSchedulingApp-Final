@@ -9,10 +9,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>HomePlanner - Login</title>
-    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body class="auth-page page-login">
+
+<header class="home-header">
+    <div class="home-header-inner">
+        <a href="HomePage.php" class="home-brand">
+            <img src="../images/logo.png" class="home-brand-logo" alt="HomePlanner">
+            <span class="home-brand-name">HomePlanner</span>
+        </a>
+        <div class="home-nav" role="navigation" aria-label="Main navigation">
+            <a href="HomePage.php" class="home-nav-link">Home</a>
+            <a href="HomePage.php#about-us" class="home-nav-link">AboutUS</a>
+            <a href="HomePage.php#features" class="home-nav-link">Features</a>
+            <a href="RegistrationPage.php" class="home-nav-btn">GetStarted</a>
+            <a href="HomePage.php#contact-us" class="home-nav-link">ContactUs</a>
+        </div>
+    </div>
+</header>
 
 <main>
     <div class="page-shell">
@@ -44,21 +60,24 @@
 
                     <div class="input-field custom-field">
                         <i class="material-icons prefix icon-small">email</i>
-                        <input id="LFNAME" type="email" placeholder="Email">
+                        <input id="LFNAME" type="email" placeholder="Email (e.g. juan.delacruz@gmail.com)">
                         <label for="LFNAME">Email</label>
                     </div>
+                    <p class="login-help-text">Use a valid email format (example: name@gmail.com, name@yahoo.com, name@ust.edu.ph).</p>
 
                     <div class="input-field custom-field">
                         <i class="material-icons prefix icon-small">lock</i>
-                        <input id="LLNAME" type="password" placeholder="Password">
+                        <input id="LLNAME" type="password" placeholder="Password (e.g. HomePlan2026!)">
                         <label for="LLNAME">Password</label>
                     </div>
+                    <p class="login-help-text">Password must match the one you used during registration.</p>
 
                     <div class="input-field custom-field">
                         <i class="material-icons prefix icon-small">home</i>
-                        <input id="LhomeSelect" type="text" placeholder="Home ID">
+                        <input id="LhomeSelect" type="text" placeholder="Home Code (e.g. #$1001)">
                         <label for="LhomeSelect">Home ID</label>
                     </div>
+                    <p class="login-help-text">Enter your assigned Home ID code (example: #$1001).</p>
 
                     <div class="login-btn-wrap">
                         <a class="waves-effect waves-light btn login-btn" onclick="loginFunc()">

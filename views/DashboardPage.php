@@ -32,7 +32,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>HomePlanner Admin</title>
-    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="css/pages.css">
 </head>
 <body class="admin-page">
 
