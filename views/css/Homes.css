@@ -467,6 +467,55 @@ body.dashboard-page .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+/* SweetAlert format tuned to match modal reference style */
+body.dashboard-page .swal2-popup {
+    width: min(640px, 92vw) !important;
+    border-radius: 8px !important;
+    padding: 22px 22px 26px !important;
+    box-shadow: 0 24px 54px rgba(15, 23, 42, 0.28) !important;
+}
+
+body.dashboard-page .swal2-icon {
+    margin: 8px auto 12px !important;
+}
+
+body.dashboard-page .swal2-title {
+    margin: 2px 0 6px !important;
+    font-size: clamp(2rem, 4vw, 2.9rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    color: #2f3747 !important;
+}
+
+body.dashboard-page .swal2-html-container {
+    margin: 0 !important;
+    font-size: clamp(1.1rem, 2.2vw, 1.55rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    color: #4b5563 !important;
+}
+
+body.dashboard-page .swal2-actions {
+    margin-top: 24px !important;
+    gap: 12px !important;
+}
+
+body.dashboard-page .swal2-actions .swal2-styled {
+    min-width: 140px !important;
+    min-height: 50px !important;
+    padding: 12px 22px !important;
+    border-radius: 12px !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+}
+
+/* This app does not use deny actions in dialogs. */
+body.dashboard-page .swal2-deny {
+    display: none !important;
+}
+
 /* ----- Red Home Dashboard ----- */
 body.dashboard-red .panel-card::before {
     background: #ff3030;
@@ -931,6 +980,7 @@ body.dashboard-red .red-tasks-page {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding-bottom: 22px;
 }
 
 body.dashboard-red .red-tasks-section {
@@ -962,6 +1012,7 @@ body.dashboard-red .red-tasks-layout {
     gap: 16px;
     min-height: 0;
     flex: 1;
+    margin-top: -2px;
 }
 
 body.dashboard-red .red-task-manager-section,
@@ -983,8 +1034,9 @@ body.dashboard-red .red-tasks-section-head {
 body.dashboard-red .task-input-bar {
     display: grid;
     grid-template-columns: 1fr 140px 140px 120px;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: stretch;
 }
 
 body.dashboard-red .task-input,
@@ -995,9 +1047,10 @@ body.dashboard-red .task-date-input {
     border-radius: 10px;
     background: #f9fafb;
     color: #1f2937;
-    padding: 9px 10px;
+    padding: 10px 12px;
     font-size: 0.86rem;
     outline: none;
+    min-height: 50px;
 }
 
 body.dashboard-red .task-input::placeholder {
@@ -1011,8 +1064,13 @@ body.dashboard-red .task-action-btn {
     color: #ffffff;
     font-size: 0.86rem;
     font-weight: 700;
-    padding: 9px 10px;
+    padding: 0 12px;
     cursor: pointer;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 body.dashboard-red .task-filter-row,
@@ -1045,6 +1103,7 @@ body.dashboard-red .task-status-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     flex: 1;
+    margin-top: 4px;
 }
 
 body.dashboard-red .task-status-column {
@@ -1903,7 +1962,7 @@ body.dashboard-blue .right-column {
 }
 
 body.dashboard-blue .footer {
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 /* ----- Green Home Dashboard ----- */
@@ -1929,7 +1988,7 @@ body.dashboard-green .small-title {
 }
 
 body.dashboard-green .footer {
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 /* ----- Yellow Home Dashboard ----- */
@@ -1955,7 +2014,7 @@ body.dashboard-yellow .small-title {
 }
 
 body.dashboard-yellow .footer {
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 /* ----- Shared multi-home module overrides ----- */
@@ -2047,6 +2106,39 @@ body.dashboard-yellow .red-budget-submit-btn {
     border-color: #c8bd3f;
 }
 
+body.dashboard-blue .red-top-link-logout {
+    background: #4f9fd8;
+    border-color: #4f9fd8;
+    color: #ffffff;
+}
+
+body.dashboard-blue .red-top-link-logout:hover {
+    background: #3e8bc1;
+    border-color: #3e8bc1;
+}
+
+body.dashboard-green .red-top-link-logout {
+    background: #5f9467;
+    border-color: #5f9467;
+    color: #ffffff;
+}
+
+body.dashboard-green .red-top-link-logout:hover {
+    background: #4f7f57;
+    border-color: #4f7f57;
+}
+
+body.dashboard-yellow .red-top-link-logout {
+    background: #c8bd3f;
+    border-color: #c8bd3f;
+    color: #ffffff;
+}
+
+body.dashboard-yellow .red-top-link-logout:hover {
+    background: #b3a932;
+    border-color: #b3a932;
+}
+
 body.dashboard-blue #redHomeCalendar .fc .fc-button {
     background: #4f9fd8;
     border-color: #4f9fd8;
@@ -2060,6 +2152,129 @@ body.dashboard-green #redHomeCalendar .fc .fc-button {
 body.dashboard-yellow #redHomeCalendar .fc .fc-button {
     background: #c8bd3f;
     border-color: #c8bd3f;
+}
+
+body.dashboard-blue .home-greeting-eyebrow {
+    color: #2f6f99;
+}
+
+body.dashboard-green .home-greeting-eyebrow {
+    color: #33643d;
+}
+
+body.dashboard-yellow .home-greeting-eyebrow {
+    color: #7b7426;
+}
+
+body.dashboard-blue .red-home-greeting-section {
+    background: linear-gradient(115deg, #ffffff 0%, #e8f4fd 100%);
+}
+
+body.dashboard-green .red-home-greeting-section {
+    background: linear-gradient(115deg, #ffffff 0%, #eaf7ee 100%);
+}
+
+body.dashboard-yellow .red-home-greeting-section {
+    background: linear-gradient(115deg, #ffffff 0%, #f8f7e6 100%);
+}
+
+body.dashboard-blue .home-snapshot-card:hover {
+    border-color: #4f9fd8;
+    box-shadow: 0 8px 16px rgba(79, 159, 216, 0.14);
+}
+
+body.dashboard-green .home-snapshot-card:hover {
+    border-color: #5f9467;
+    box-shadow: 0 8px 16px rgba(95, 148, 103, 0.14);
+}
+
+body.dashboard-yellow .home-snapshot-card:hover {
+    border-color: #c8bd3f;
+    box-shadow: 0 8px 16px rgba(200, 189, 63, 0.16);
+}
+
+body.dashboard-blue .home-metric-value {
+    color: #2f78b5;
+}
+
+body.dashboard-green .home-metric-value {
+    color: #3f7a48;
+}
+
+body.dashboard-yellow .home-metric-value {
+    color: #8b8025;
+}
+
+body.dashboard-blue .home-metric-budget-block {
+    background: linear-gradient(120deg, #eaf5fd 0%, #ffffff 100%);
+    border-color: #c4def0;
+    border-left: 4px solid #4f9fd8;
+}
+
+body.dashboard-green .home-metric-budget-block {
+    background: linear-gradient(120deg, #edf8ef 0%, #ffffff 100%);
+    border-color: #c8dfcd;
+    border-left: 4px solid #5f9467;
+}
+
+body.dashboard-yellow .home-metric-budget-block {
+    background: linear-gradient(120deg, #faf8e9 0%, #ffffff 100%);
+    border-color: #e2ddbe;
+    border-left: 4px solid #c8bd3f;
+}
+
+body.dashboard-blue .home-metric-reminders-block {
+    background: linear-gradient(120deg, #f4faff 0%, #ffffff 100%);
+    border-color: #d5e8f6;
+}
+
+body.dashboard-green .home-metric-reminders-block {
+    background: linear-gradient(120deg, #f3fcf5 0%, #ffffff 100%);
+    border-color: #d3e8d8;
+}
+
+body.dashboard-yellow .home-metric-reminders-block {
+    background: linear-gradient(120deg, #fcfbf2 0%, #ffffff 100%);
+    border-color: #ebe6cd;
+}
+
+body.dashboard-blue .home-pending-event-item {
+    border-color: #c6dded;
+    color: #2f6f99;
+}
+
+body.dashboard-green .home-pending-event-item {
+    border-color: #cce1d0;
+    color: #3f6846;
+}
+
+body.dashboard-yellow .home-pending-event-item {
+    border-color: #e3dfc0;
+    color: #756d22;
+}
+
+body.dashboard-blue .home-pending-event-item::before {
+    background: #4f9fd8;
+}
+
+body.dashboard-green .home-pending-event-item::before {
+    background: #5f9467;
+}
+
+body.dashboard-yellow .home-pending-event-item::before {
+    background: #c8bd3f;
+}
+
+body.dashboard-blue .home-metric-users-block {
+    background: linear-gradient(130deg, #327eb5 0%, #4f9fd8 65%, #77bbe8 100%);
+}
+
+body.dashboard-green .home-metric-users-block {
+    background: linear-gradient(130deg, #4a7c52 0%, #5f9467 65%, #83b58a 100%);
+}
+
+body.dashboard-yellow .home-metric-users-block {
+    background: linear-gradient(130deg, #9f9531 0%, #c8bd3f 65%, #dcd471 100%);
 }
 
 /* ----- Responsive: Red Home Dashboard ----- */
