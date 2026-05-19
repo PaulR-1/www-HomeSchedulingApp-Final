@@ -54,6 +54,28 @@
         </div>
 
         <div class="home-hero-visual">
+            <div class="home-preview-side-grid">
+                <div class="home-preview-card home-preview-side">
+                    <i class="material-icons">event</i>
+                    <p>Family calendar</p>
+                </div>
+
+                <div class="home-preview-card home-preview-side">
+                    <i class="material-icons">home</i>
+                    <p>Built for all kinds of homes</p>
+                </div>
+
+                <div class="home-preview-card home-preview-side">
+                    <i class="material-icons">checklist</i>
+                    <p>Shared task lists for everyone</p>
+                </div>
+
+                <div class="home-preview-card home-preview-side">
+                    <i class="material-icons">notifications_active</i>
+                    <p>Smart reminders and alerts</p>
+                </div>
+            </div>
+
             <div class="home-preview-card home-preview-main">
                 <div class="home-preview-label">This week at a glance</div>
                 <div class="home-preview-stat">
@@ -67,16 +89,6 @@
                     <span style="height: 82%"></span>
                     <span style="height: 61%"></span>
                 </div>
-            </div>
-
-            <div class="home-preview-card home-preview-side">
-                <i class="material-icons">event</i>
-                <p>Family calendar</p>
-            </div>
-
-            <div class="home-preview-card home-preview-side home-preview-accent">
-                <i class="material-icons">home</i>
-                <p>Red, Blue, Green &amp; Yellow homes</p>
             </div>
         </div>
     </section>
@@ -132,6 +144,26 @@
                 <div class="home-feature-icon"><i class="material-icons">dashboard</i></div>
                 <h3>Color-coded homes</h3>
                 <p>Each home gets its own dashboard theme and member roster.</p>
+            </article>
+            <article class="home-feature-card">
+                <div class="home-feature-icon"><i class="material-icons">groups</i></div>
+                <h3>Role-based access</h3>
+                <p>Assign member and admin permissions to keep actions organized.</p>
+            </article>
+            <article class="home-feature-card">
+                <div class="home-feature-icon"><i class="material-icons">notifications_active</i></div>
+                <h3>Smart reminders</h3>
+                <p>Get timely prompts for important tasks, events, and deadlines.</p>
+            </article>
+            <article class="home-feature-card">
+                <div class="home-feature-icon"><i class="material-icons">insights</i></div>
+                <h3>Progress insights</h3>
+                <p>Track completion patterns and weekly progress at a glance.</p>
+            </article>
+            <article class="home-feature-card">
+                <div class="home-feature-icon"><i class="material-icons">sync</i></div>
+                <h3>Live sync updates</h3>
+                <p>Keep household plans up to date for everyone in real time.</p>
             </article>
         </div>
     </section>
