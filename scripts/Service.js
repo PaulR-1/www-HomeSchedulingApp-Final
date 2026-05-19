@@ -541,11 +541,11 @@ function redirectFunc(redirectID) {
     if (redirectID == 1) {
         window.location.href = "../views/Dashboards/RedHome/RedHomeHome.php";
     } else if (redirectID == 2) {
-        window.location.href = "../views/Dashboards/BlueHomeDash.php";
+        window.location.href = "../views/Dashboards/BlueHome/BlueHomeDash.php";
     } else if (redirectID == 3) {
-        window.location.href = "../views/Dashboards/YellowHomeDash.php";
+        window.location.href = "../views/Dashboards/YellowHome/YellowHomeDash.php";
     } else if (redirectID == 4) {
-        window.location.href = "../views/Dashboards/GreenHomeDash.php";
+        window.location.href = "../views/Dashboards/GreenHome/GreenHomeDash.php";
     } else if (redirectID == 5) {
         window.location.href = "../views/LoginPage.php";
     } else if (redirectID == 6) {
