@@ -2132,6 +2132,20 @@ body.dashboard-yellow #redHomeCalendar .fc .fc-button {
     body.dashboard-red .red-budget-submit-btn-main {
         grid-column: 1 / -1;
     }
+
+    body.dashboard-red .red-admin-add-form {
+        grid-template-columns: 1fr;
+    }
+
+    body.dashboard-red .red-budget-summary-grid,
+    body.dashboard-red .red-budget-allocation-grid,
+    body.dashboard-red .red-budget-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.dashboard-red .red-budget-category-controls {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2211,20 +2225,6 @@ body.dashboard-yellow #redHomeCalendar .fc .fc-button {
 
     body.dashboard-red .calendar-week-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    body.dashboard-red .red-admin-add-form {
-        grid-template-columns: 1fr;
-    }
-
-    body.dashboard-red .red-budget-summary-grid,
-    body.dashboard-red .red-budget-allocation-grid,
-    body.dashboard-red .red-budget-form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    body.dashboard-red .red-budget-category-controls {
-        grid-template-columns: 1fr;
     }
 
     body.dashboard-red .red-budget-allocation-head {

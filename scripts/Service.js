@@ -216,12 +216,7 @@ function addFunc() {
                 return;
             }
 
-            Swal.fire({
-                icon: "error",
-                title: "Registration Error",
-                text: "Unable to complete registration right now. Please try again.",
-                confirmButtonText: "OK"
-            });
+            alert(xhr.status + " : " + xhr.responseText);
         }
     });
 }
@@ -591,13 +586,46 @@ function loginFunc() {
     var LoginSelect = 0;
 
     //validation
-    if(loginEmail.length < 2||RawLoginSelect.length<6)
+    if(loginEmail.length < 2||loginPassword.length < 2||RawLoginSelect.length<6)
         {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
                 text: "Input Incorect!",
                 footer: "<a href=\"#\">Not Enough characters..</a>"
+                });
+            return;
+        }
+
+    if(loginEmail.length > 50)
+        {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Email must be 50 characters or fewer!",
+                footer: "<a href=\"#\">Use the same email length rules as registration.</a>"
+                });
+            return;
+        }
+
+    if(loginPassword.length < 12 || loginPassword.length > 50)
+        {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Password must be 12 to 50 characters!",
+                footer: "<a href=\"#\">Use the same password limits as registration.</a>"
+                });
+            return;
+        }
+
+    if(RawLoginSelect.length > 12)
+        {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Home ID must be 12 characters or fewer!",
+                footer: "<a href=\"#\">Use a valid Home ID format like #$1001.</a>"
                 });
             return;
         }

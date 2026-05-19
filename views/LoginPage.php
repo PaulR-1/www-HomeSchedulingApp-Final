@@ -60,21 +60,21 @@
 
                     <div class="input-field custom-field">
                         <i class="material-icons prefix icon-small">email</i>
-                        <input id="LFNAME" type="email" placeholder="Email (e.g. juan.delacruz@gmail.com)">
+                        <input id="LFNAME" type="email" placeholder="Email (e.g. juan.delacruz@gmail.com)" maxlength="50" required>
                         <label for="LFNAME">Email</label>
                     </div>
                     <p class="login-help-text">Use a valid email format (example: name@gmail.com, name@yahoo.com, name@ust.edu.ph).</p>
 
                     <div class="input-field custom-field">
                         <i class="material-icons prefix icon-small">lock</i>
-                        <input id="LLNAME" type="password" placeholder="Password (e.g. HomePlan2026!)">
+                        <input id="LLNAME" type="password" placeholder="Password (e.g. HomePlan2026!)" minlength="12" maxlength="50" required>
                         <label for="LLNAME">Password</label>
                     </div>
                     <p class="login-help-text">Password must match the one you used during registration.</p>
 
                     <div class="input-field custom-field">
                         <i class="material-icons prefix icon-small">home</i>
-                        <input id="LhomeSelect" type="text" placeholder="Home Code (e.g. #$1001)">
+                        <input id="LhomeSelect" type="text" placeholder="Home Code (e.g. #$1001)" maxlength="12" required>
                         <label for="LhomeSelect">Home ID</label>
                     </div>
                     <p class="login-help-text">Enter your assigned Home ID code (example: #$1001).</p>
